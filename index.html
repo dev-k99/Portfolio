@@ -113,15 +113,14 @@
             <!-- ### about
 ================================================== -->
 <section id="about" class="s-about target-section">
+ <div class="container">  
     <div class="row about-info wide" data-animate-block>
-        <div class="column lg-6 md-12 about-info__pic-block">
-           
-        </div>
-        <div class="column lg-6 md-12">
+        
+        <div class="column lg-10 md-11 sm-12 offset-lg-1 offset-md-0_5"> 
             <div class="about-info__text">
                 <h2 class="text-pretitle with-line" data-animate-el>About</h2>
                 <p class="attention-getter" data-animate-el>
-                    As a junior developer in my final year of university, I am passionate about building innovative 
+                    As a junior developer, I am passionate about building innovative 
                     and efficient software solutions. With a strong foundation in languages like Python, C#, 
                     and JavaScript, and hands-on experience in frameworks such as ASP.NET Core and Seaborn for data visualization,
                     I thrive on transforming ideas into functional applications. My recent projects include developing a hospital
@@ -131,7 +130,9 @@
                 </p>
             </div>
         </div>
-    </div> <!-- end about-info -->
+        
+    </div>
+</div>
 
     <div class="row about-skills" data-animate-block>
         <div class="column lg-12">
@@ -184,13 +185,24 @@
                     <div class="timeline__header">
                         <h4 class="timeline__title">Nelson Mandela University</h4>
                         <h5 class="timeline__meta">Diploma in Information Technology</h5>
-                        <p class="timeline__timeframe">Feb 2023 - Present</p>
+                        <p class="timeline__timeframe">Feb 2023 - Dec 2025</p>
                     </div>
                     <div class="timeline__desc">
-                        <p>Currently enrolled in a Diploma in Information Technology at NMU, developing skills in software development, database management, and web technologies, with an expected completion in 2025.</p>
+                        <p>I was enrolled in a Diploma in Information Technology at NMU, developing skills in software/web development, database management & design, and web technologies, with an expected formal graduation in April 2026.</p>
                     </div>
                 </div>
                 <div class="timeline__block">
+                     <div class="timeline__block">
+                    
+                    <div class="timeline__header">
+                        <h4 class="timeline__title">Angular 20 & ASP.NET Core Web API</h4>
+                        <h5 class="timeline__meta">Udemy Certificate of Completion</h5>
+                        <p class="timeline__timeframe">Oct 2025</p>
+                    </div>
+                    <div class="timeline__desc">
+                        <p>Learnt how to build a Web app from scratch using Angular 20.0.6 and ASP.NET 8 from hands-on tutorials. <a href="https://drive.google.com/file/d/1RHW-aaqvE-4kIwD5jQHXzkpvPN_-NMnB/view?usp=sharing" target="_blank" class="certificate-link">View Certificate</a></p>
+                    </div>
+                </div>
                 
                 <div class="timeline__block">
                 <div class="timeline__header">
@@ -211,7 +223,7 @@
                         <p class="timeline__timeframe">Apr 2024</p>
                     </div>
                     <div class="timeline__desc">
-                        <p>Received an award for outstanding performance in my first year at Nelson Mandela University, recognized for excellence in C# programming and dedication to coursework. <a href="https://drive.google.com/file/d/1Tu_9fC9rlikb4ZGq-3WaFl5MnTbIqtr7/view?usp=sharing" target="_blank" class="certificate-link">View Certificate</a></p>
+                        <p>Received an award for outstanding performance in my first year at Nelson Mandela University, recognized for excellence in C# programming and dedication to coursework. <a href="https://drive.google.com/file/d/1rq7bm2VJDHknEbKhVLitGvwUpXnKvvXD/view?usp=sharing" target="_blank" class="certificate-link">View Certificate</a></p>
                     </div>
                 </div>
 
@@ -227,6 +239,7 @@
                     </div>
                 </div>
                 
+            
                 
                     
                     <div class="timeline__header">
@@ -243,56 +256,103 @@
     </div> <!-- end about-achievements -->
 </section> <!-- end s-about -->
 
-
-            
-            <!-- ### works
+<!-- ### works
 ================================================== -->
 <section id="works" class="s-works target-section">
     <div class="row works-portfolio">
         <div class="column lg-12" data-animate-block>
             <h2 class="text-pretitle" data-animate-el>Recent Works</h2>
             <p class="h1" data-animate-el>
-                Here are some of my favorite projects I have worked on recently. Check them out on GitHub!
+                Here are some of my favorite projects I have worked on recently. Check them out!
             </p>
+
             <ul class="folio-list row block-lg-one-half block-stack-on-1000">
+
+                <!-- Hospital Ward Management System -->
                 <li class="folio-list__item column" data-animate-el>
-                    <a class="folio-list__item-link">
+                    <a href="https://github.com/dev-k99/HospitalWardManagementSystem" class="folio-list__item-link" target="_blank">
                         <div class="folio-list__item-pic">
                             <img src="images/portfolio/ward-management.png"
-                                 srcset="images/portfolio/ward-management.png 1x, images/portfolio/ward-management@2x.png 2x" alt="Hospital Ward Management System">
+                                 srcset="images/portfolio/ward-management.png 1x, images/portfolio/ward-management@2x.png 2x"
+                                 alt="Hospital Ward Management System">
                         </div>
                         <div class="folio-list__item-text">
-                            <div class="folio-list__item-cat">Web Application</div>
+                            <div class="folio-list__item-cat">Full-Stack Web App</div>
                             <div class="folio-list__item-title">Hospital Ward Management System</div>
                         </div>
                     </a>
-                    <a class="folio-list__proj-link" href="https://github.com/dev-k99/HospitalWardManagementSystem" title="View on GitHub">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    <a class="folio-list__proj-link" href="https://github.com/dev-k99/HospitalWardManagementSystem" target="_blank" title="View on GitHub">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
                     </a>
-                </li> <!-- end folio-list__item -->
+                </li>
+
+                <!-- MyOwnDatabase -->
                 <li class="folio-list__item column" data-animate-el>
-                    <a class="folio-list__item-link">
+                    <a href="https://github.com/dev-k99/MyOwnDatabase" class="folio-list__item-link" target="_blank">
                         <div class="folio-list__item-pic">
-                            <img src="images/portfolio/scrapyard-app.png"
-                                 srcset="images/portfolio/scrapyard-app.png 1x, images/portfolio/scrapyard-app@2x.png 2x" alt="Scrapyard App">
+                            <img src="images/portfolio/myowndatabase-preview.jpg"
+                                 srcset="images/portfolio/myowndatabase-preview.jpg 1x, images/portfolio/myowndatabase-preview@2x.jpg 2x"
+                                 alt="MyOwnDatabase – Custom Database Engine">
                         </div>
                         <div class="folio-list__item-text">
-                            <div class="folio-list__item-cat">Web Application</div>
-                            <div class="folio-list__item-title">Scrapyard App</div>
+                            <div class="folio-list__item-cat">Backend · Systems Programming</div>
+                            <div class="folio-list__item-title">MyOwnDatabase</div>
+                            <div class="folio-list__item-desc">From-scratch SQL-like database engine in C#</div>
                         </div>
                     </a>
-                    <a class="folio-list__proj-link" href="https://github.com/dev-k99/ScrapyardApp" title="View on GitHub">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    <a class="folio-list__proj-link" href="https://github.com/dev-k99/MyOwnDatabase" target="_blank" title="View on GitHub">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">...</svg>
                     </a>
-                </li> <!-- end folio-list__item -->
-            </ul> <!-- end folio-list -->
-        </div> <!-- end column -->
+                </li>
 
-       
-        </div> <!-- end modal -->
+                <!-- KotaKing API -->
+                <li class="folio-list__item column" data-animate-el>
+                    <a href="https://github.com/dev-k99/KotaKing.API" class="folio-list__item-link" target="_blank">
+                        <div class="folio-list__item-pic">
+                            <img src="images/portfolio/kotaking-preview.jpg"
+                                 srcset="images/portfolio/kotaking-preview.jpg 1x, images/portfolio/kotaking-preview@2x.jpg 2x"
+                                 alt="KotaKing – Food Delivery Backend">
+                        </div>
+                        <div class="folio-list__item-text">
+                            <div class="folio-list__item-cat">Backend API · Payments</div>
+                            <div class="folio-list__item-title">KotaKing Food Delivery API</div>
+                            <div class="folio-list__item-desc">JWT, PayFast, real-time orders & student discounts</div>
+                        </div>
+                    </a>
+                    <a class="folio-list__proj-link" href="https://github.com/dev-k99/KotaKing.API" target="_blank" title="View on GitHub">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">...</svg>
+                    </a>
+                </li>
 
-    </div> <!-- end works-portfolio -->
+                <!-- FocusList Todo App -->
+                <li class="folio-list__item column" data-animate-el>
+                    <a href="https://dev-k99.github.io/FocusList/" class="folio-list__item-link" target="_blank">
+                        <div class="folio-list__item-pic">
+                            <img src="images/portfolio/focuslist-preview.jpg"
+                                 srcset="images/portfolio/focuslist-preview.jpg 1x, images/portfolio/focuslist-preview@2x.jpg 2x"
+                                 alt="FocusList – Beautiful Todo App">
+                        </div>
+                        <div class="folio-list__item-text">
+                            <div class="folio-list__item-cat">Frontend · Vanilla JS</div>
+                            <div class="folio-list__item-title">FocusList</div>
+                            <div class="folio-list__item-desc">Calm todo app with auto-save, filters & glass-morphism UI</div>
+                        </div>
+                    </a>
+                    <a class="folio-list__proj-link" href="https://github.com/dev-k99/FocusList" target="_blank" title="View Source">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
 </section> <!-- end s-works -->
+ 
+   
 
 
             <!-- ### contact

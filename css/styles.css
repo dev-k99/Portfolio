@@ -570,24 +570,20 @@ textarea {
 
 
 
-/* ===================================================================
- * # GRID v4.0.0
- *
- *
- *   -----------------------------------------------------------------
- * - Grid breakpoints are based on MAXIMUM WIDTH media queries, 
- *   meaning they apply to that one breakpoint and ALL THOSE BELOW IT.
- * - Grid columns without a specified width will automatically layout 
- *   as equal width columns.
- *
- * - BLOCK GRID columns(columns inside BLOCK GRID containers) are 
- *   equally-sized columns define at parent/row level. 
- *   A BLOCK GRID container's class attribute value begins with "block-".
- *
- * ------------------------------------------------------------------- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;        /* This prevents text from touching the edge */
+    box-sizing: border-box;
+}
 
-/* row 
- */
+
+.about-info__text {
+    text-align: center;     /* Looks better when no photo yet */
+    max-width: 800px;
+    margin: 0 auto;
+}
 .row {
     width     : 92%;
     max-width : var(--width-grid-max);
