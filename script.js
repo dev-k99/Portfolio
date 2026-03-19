@@ -84,14 +84,14 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all sections and cards
-const elementsToAnimate = document.querySelectorAll('.project-card, .feature-card, .contact-card, .step, .skill-card, .skills-category');
+const elementsToAnimate = document.querySelectorAll('.pcard, .project-featured, .feature-card, .contact-card, .step, .skill-card, .skills-category');
 elementsToAnimate.forEach(element => {
     element.classList.add('fade-in');
     observer.observe(element);
 });
 
 // Add staggered animation delay to cards
-document.querySelectorAll('.projects-grid .project-card').forEach((card, index) => {
+document.querySelectorAll('.projects-grid-new .pcard').forEach((card, index) => {
     card.style.animationDelay = `${index * 0.1}s`;
 });
 
@@ -209,6 +209,23 @@ tabBtns.forEach(btn => {
     btn.classList.add('active');
     document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
   });
+});
+
+// Project Filter
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.projects-grid-new .pcard');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        projectCards.forEach(card => {
+            const match = filter === 'all' || card.dataset.category === filter;
+            card.classList.remove('is-hidden', 'is-visible');
+            card.classList.add(match ? 'is-visible' : 'is-hidden');
+        });
+    });
 });
 
 // Console message for developers
