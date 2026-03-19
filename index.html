@@ -215,213 +215,183 @@
           </p>
         </div>
 
-        <!-- Frontend -->
-        <div class="skills-category">
-          <h3 class="category-title">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <polyline points="16 18 22 12 16 6"></polyline>
-              <polyline points="8 6 2 12 8 18"></polyline>
-            </svg>
-            Frontend
-          </h3>
-          <div class="skills-grid">
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/javascript/javascript-original.svg"
-                  alt="JavaScript"
-                />
-              </div>
-              <span class="skill-name">JavaScript</span>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/typescript/typescript-original.svg"
-                  alt="TypeScript"
-                />
-              </div>
-              <span class="skill-name">TypeScript</span>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/react/react-original.svg"
-                  alt="React"
-                />
-              </div>
-              <span class="skill-name">React</span>
-            </div>
-          </div>
+        <!-- Tab Navigation -->
+        <div class="skills-tab-nav">
+          <button class="tab-btn active" data-tab="backend">Backend</button>
+          <button class="tab-btn" data-tab="frontend">Frontend</button>
+          <button class="tab-btn" data-tab="databases">Databases</button>
+          <button class="tab-btn" data-tab="devops">DevOps & Tools</button>
+          <button class="tab-btn" data-tab="ai">AI & Automation</button>
         </div>
 
         <!-- Backend -->
-        <div class="skills-category">
-          <h3 class="category-title">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-              <line x1="8" y1="21" x2="16" y2="21"></line>
-              <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
-            Backend
-          </h3>
+        <div class="tab-panel active" id="tab-backend">
           <div class="skills-grid">
             <div class="skill-card">
               <div class="skill-icon">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/nodejs/nodejs-original.svg"
-                  alt="Node.js"
-                />
-              </div>
-              <span class="skill-name">Node.js</span>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/csharp/csharp-original.svg"
-                  alt="C#"
-                />
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/csharp/csharp-original.svg" alt="C#" />
               </div>
               <span class="skill-name">C#</span>
             </div>
             <div class="skill-card">
               <div class="skill-icon">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/dotnetcore/dotnetcore-original.svg"
-                  alt="ASP.NET Core"
-                />
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/dotnetcore/dotnetcore-original.svg" alt="ASP.NET Core" />
               </div>
               <span class="skill-name">ASP.NET Core</span>
             </div>
             <div class="skill-card">
               <div class="skill-icon">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/python/python-original.svg"
-                  alt="Python"
-                />
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/dotnet.svg" alt="Entity Framework Core" class="skill-icon-mono" />
+              </div>
+              <span class="skill-name">Entity Framework Core</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/dotnetcore/dotnetcore-original.svg" alt="SignalR" />
+              </div>
+              <span class="skill-name">SignalR</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/python/python-original.svg" alt="Python" />
               </div>
               <span class="skill-name">Python</span>
             </div>
           </div>
         </div>
 
-        <!-- Databases -->
-        <div class="skills-category">
-          <h3 class="category-title">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-            </svg>
-            Databases
-          </h3>
+        <!-- Frontend -->
+        <div class="tab-panel" id="tab-frontend">
           <div class="skills-grid">
             <div class="skill-card">
               <div class="skill-icon">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/postgresql/postgresql-original.svg"
-                  alt="PostgreSQL"
-                />
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/javascript/javascript-original.svg" alt="JavaScript" />
+              </div>
+              <span class="skill-name">JavaScript</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/typescript/typescript-original.svg" alt="TypeScript" />
+              </div>
+              <span class="skill-name">TypeScript</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/react/react-original.svg" alt="React" />
+              </div>
+              <span class="skill-name">React</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" />
+              </div>
+              <span class="skill-name">Tailwind CSS</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite" />
+              </div>
+              <span class="skill-name">Vite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="tab-panel" id="tab-databases">
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
               </div>
               <span class="skill-name">PostgreSQL</span>
             </div>
             <div class="skill-card">
               <div class="skill-icon">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
-                  alt="SQL Server"
-                />
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" />
               </div>
               <span class="skill-name">SQL Server</span>
             </div>
             <div class="skill-card">
               <div class="skill-icon">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/supabase.svg"
-                  alt="Supabase"
-                />
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/supabase.svg" alt="Supabase" class="skill-icon-mono" />
               </div>
               <span class="skill-name">Supabase</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/azure/azure-original.svg" alt="Azure SQL" />
+              </div>
+              <span class="skill-name">Azure SQL</span>
             </div>
           </div>
         </div>
 
         <!-- DevOps & Tools -->
-        <div class="skills-category">
-          <h3 class="category-title">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M12 1v6m0 6v6m9-9h-6m-6 0H3"></path>
-            </svg>
-            DevOps & Tools
-          </h3>
+        <div class="tab-panel" id="tab-devops">
           <div class="skills-grid">
             <div class="skill-card">
               <div class="skill-icon">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/azure/azure-original.svg"
-                  alt="Azure"
-                />
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/azure/azure-original.svg" alt="Azure" />
               </div>
               <span class="skill-name">Azure</span>
             </div>
             <div class="skill-card">
               <div class="skill-icon">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/docker/docker-original.svg"
-                  alt="Docker"
-                />
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/docker/docker-original.svg" alt="Docker" />
               </div>
               <span class="skill-name">Docker</span>
             </div>
             <div class="skill-card">
               <div class="skill-icon">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/github/github-original.svg"
-                  alt="GitHub"
-                />
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.15.1/icons/github/github-original.svg" alt="GitHub" />
               </div>
               <span class="skill-name">GitHub</span>
             </div>
             <div class="skill-card">
               <div class="skill-icon">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/render.svg"
-                  alt="Render"
-                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="GitHub Actions" />
               </div>
-              <span class="skill-name">Render</span>
+              <span class="skill-name">GitHub Actions</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" />
+              </div>
+              <span class="skill-name">Vercel</span>
             </div>
           </div>
         </div>
+
+        <!-- AI & Automation -->
+        <div class="tab-panel" id="tab-ai">
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openai.svg" alt="AI & Prompt Engineering" class="skill-icon-mono" />
+              </div>
+              <span class="skill-name">AI & Prompt Engineering</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/powerautomate.svg" alt="Power Automate" class="skill-icon-mono" />
+              </div>
+              <span class="skill-name">Power Automate</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zapier.svg" alt="Zapier" class="skill-icon-mono" />
+              </div>
+              <span class="skill-name">Zapier</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/n8n.svg" alt="n8n" class="skill-icon-mono" />
+              </div>
+              <span class="skill-name">n8n</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -436,6 +406,81 @@
         </div>
 
         <div class="projects-grid">
+          <!-- Project: ScrapFlow SA -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="./images/portfolio/ScrapFlow.png"
+                alt="ScrapFlow SA"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://scrap-flow-xi.vercel.app/"
+                    class="project-link"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    Live App
+                  </a>
+                  <a
+                    href="https://github.com/dev-k99/ScrapFlow"
+                    class="project-link"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.44 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.44 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path>
+                    </svg>
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">React 18</span>
+                <span class="tag">ASP.NET Core 8</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">SignalR</span>
+                <span class="tag">PWA</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Zapier</span>
+              </div>
+
+              <h3 class="project-title">ScrapFlow SA</h3>
+              <p class="project-description">
+                Full-stack scrap metal management system built for South African
+                scrapyards. Features a 6-step digital ticket workflow, real-time
+                SignalR inventory tracking, 5-role RBAC, SAPS/ITAC compliance,
+                weighbridge hardware integration via Web Serial API, and an
+                offline-first PWA — deployed on Vercel, Render &amp; Supabase.
+              </p>
+            </div>
+          </div>
+
           <!-- Project 1: PDF RAG Assistant -->
           <div class="project-card">
             <div class="project-image">
@@ -640,6 +685,27 @@
               <div class="project-overlay">
                 <div class="project-links">
                   <a
+                    href="https://wardcareplus.azurewebsites.net/"
+                    class="project-link"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    Live App
+                  </a>
+                  <a
                     href="https://github.com/dev-k99/HospitalWardManagementSystem"
                     class="project-link"
                     target="_blank"
@@ -663,17 +729,23 @@
             </div>
             <div class="project-content">
               <div class="project-tags">
-                <span class="tag">ASP.NET</span>
+                <span class="tag">ASP.NET Core 8</span>
+                <span class="tag">MVC</span>
                 <span class="tag">C#</span>
-                <span class="tag">React</span>
-                <span class="tag">Bootstrap</span>
-                <span class="tag">SQL</span>
+                <span class="tag">EF Core 8</span>
+                <span class="tag">Azure SQL</span>
+                <span class="tag">GitHub Actions</span>
+                <span class="tag">xUnit</span>
               </div>
               <h3 class="project-title">WardCare+</h3>
               <p class="project-description">
-                Web application for managing hospital wards with role-based
-                authentication, patient tracking, and administrative features
-                built with ASP.NET Core 8.
+                Production-quality hospital ward management system deployed live
+                on Azure — built by a team of 4. Covers the full patient
+                lifecycle: admission, nursing care, doctor visits, pharmacy
+                workflow, and discharge. Features 7-role RBAC, POPIA-compliant
+                audit logging, in-memory PDF generation, automated CI/CD via
+                GitHub Actions, and EF Core Code-First migrations applied
+                automatically on startup.
               </p>
             </div>
           </div>
@@ -682,10 +754,31 @@
             <div class="project-image">
               <img
                 src="./images/portfolio/LibraryOS.png"
-                alt="Library Management System"
+                alt="Eskhawini LibraryOS"
               />
               <div class="project-overlay">
                 <div class="project-links">
+                  <a
+                    href="https://eskhawini-library-system.vercel.app/"
+                    class="project-link"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    Live App
+                  </a>
                   <a
                     href="https://github.com/dev-k99/Eskhawini-Library-System"
                     class="project-link"
@@ -710,17 +803,22 @@
             </div>
             <div class="project-content">
               <div class="project-tags">
-                <span class="tag">C#</span>
                 <span class="tag">ASP.NET Core 8</span>
+                <span class="tag">React 19</span>
                 <span class="tag">PostgreSQL</span>
-                <span class="tag">React</span>
+                <span class="tag">SignalR</span>
+                <span class="tag">Clean Architecture</span>
+                <span class="tag">Azure</span>
                 <span class="tag">Tailwind CSS</span>
               </div>
-              <h3 class="project-title">Library OS System</h3>
+              <h3 class="project-title">Eskhawini LibraryOS</h3>
               <p class="project-description">
-                A modern, full-stack library management platform with QR code
-                checkouts, real-time updates via SignalR & Gmail, voice
-                searches, analytics dashboards, and a responsive React frontend.
+                Production-deployed full-stack library management platform built
+                on .NET 8 Clean Architecture and React 19. Features 3-role RBAC,
+                JWT auth with refresh token rotation, real-time SignalR
+                notifications, QR code loan tracking, voice search, analytics
+                dashboards, sustainability carbon tracking, and a CORS/secret-safe
+                CI/CD pipeline — hosted on Azure &amp; Vercel.
               </p>
             </div>
           </div>
