@@ -198,6 +198,19 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
+// Skills Tabs
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
+
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabBtns.forEach(b => b.classList.remove('active'));
+    tabPanels.forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
 // Console message for developers
 console.log('%c👋 Hi there!', 'font-size: 20px; font-weight: bold; color: #0066ff;');
 console.log('%cInterested in the code? Check out the repository!', 'font-size: 14px; color: #4a4a4a;');
