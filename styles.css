@@ -543,6 +543,16 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: contain;
 }
 
+img.skill-icon-mono {
+    filter: brightness(0) opacity(0.65);
+    transition: filter var(--transition-normal);
+}
+
+.skill-card:hover img.skill-icon-mono {
+    filter: invert(26%) sepia(97%) saturate(2876%) hue-rotate(213deg) brightness(101%) contrast(101%);
+    opacity: 1;
+}
+
 .skill-name {
     font-weight: 600;
     color: var(--text-primary);
@@ -553,6 +563,63 @@ h1, h2, h3, h4, h5, h6 {
 
 .skill-card:hover .skill-name {
     color: var(--primary-color);
+}
+
+/* Skills Tabs */
+.skills-tab-nav {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid #e9ecef;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.skills-tab-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-btn {
+    flex-shrink: 0;
+    padding: 0.75rem 1.5rem;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    font-family: var(--font-primary);
+    white-space: nowrap;
+}
+
+.tab-btn:hover {
+    color: var(--primary-color);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.tab-panel {
+    display: none;
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.tab-panel.active {
+    display: block;
+    animation: tabFadeIn 0.25s ease forwards;
+}
+
+@keyframes tabFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Projects Section */
