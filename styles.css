@@ -1459,3 +1459,361 @@ img.skill-icon-mono {
         justify-content: center;
     }
 }
+
+/* =============================================
+   NEW: Hero dual CTA
+   ============================================= */
+.hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0;
+}
+
+.cta-button--secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all var(--transition-normal);
+}
+
+.cta-button--secondary:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(0, 102, 255, 0.3);
+}
+
+/* =============================================
+   NEW: Nav Download CV button
+   ============================================= */
+.nav-cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: var(--font-secondary);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.nav-cv-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* =============================================
+   NEW: Published Tool Banner (RaptorReview)
+   ============================================= */
+.published-tool-banner {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 0;
+    border-radius: 18px;
+    border: 2px solid #e8f0ff;
+    background: linear-gradient(135deg, #f0f5ff 0%, #ffffff 100%);
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.published-tool-banner__image {
+    overflow: hidden;
+}
+
+.published-tool-banner__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.published-tool-banner__body {
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.published-tool-banner__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.badge-marketplace {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.85rem;
+    background: #24292f;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.published-tool-banner__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    font-family: var(--font-primary);
+}
+
+.published-tool-banner__desc {
+    color: var(--text-secondary);
+    line-height: 1.65;
+    font-size: 0.97rem;
+    margin: 0;
+}
+
+.published-tool-banner__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.published-tool-banner__cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 900px) {
+    .published-tool-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .published-tool-banner__image {
+        aspect-ratio: 16/9;
+        max-height: 220px;
+    }
+
+    .published-tool-banner__body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-ctas {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta-button--secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .published-tool-banner__cta {
+        flex-direction: column;
+    }
+
+    .published-tool-banner__cta .btn-primary,
+    .published-tool-banner__cta .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* =============================================
+   Case Study Button
+   ============================================= */
+.btn-case-study {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 0.85rem;
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: gap var(--transition-fast), opacity var(--transition-fast);
+}
+
+.btn-case-study:hover {
+    gap: 0.55rem;
+    opacity: 0.8;
+}
+
+/* =============================================
+   Case Study Modal
+   ============================================= */
+.pmodal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.pmodal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pmodal {
+    position: relative;
+    background: var(--bg-primary);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 780px;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: translateY(24px);
+    transition: transform 0.25s ease;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+}
+
+.pmodal-overlay.is-open .pmodal {
+    transform: translateY(0);
+}
+
+.pmodal__hero {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+.pmodal__hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pmodal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1.5px solid var(--border-color);
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--text-primary);
+    z-index: 10;
+    transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.pmodal__close:hover {
+    background: var(--bg-secondary);
+    transform: scale(1.1);
+}
+
+.pmodal__content {
+    padding: 1.75rem 2.5rem 2.5rem;
+}
+
+.pmodal__header {
+    margin-bottom: 2rem;
+}
+
+.pmodal__title {
+    font-family: var(--font-primary);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.pmodal__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.pmodal__links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.pmodal__link-btn {
+    font-size: 0.88rem !important;
+    padding: 0.55rem 1.1rem !important;
+}
+
+.pmodal__section {
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+.pmodal__section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+}
+
+.pmodal__section-text {
+    color: var(--text-secondary);
+    line-height: 1.75;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .pmodal-overlay {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .pmodal {
+        max-width: 100%;
+        max-height: 92dvh;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .pmodal__hero {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .pmodal__content {
+        padding: 1.25rem 1.25rem 2rem;
+    }
+
+    .pmodal__title {
+        font-size: 1.4rem;
+    }
+}
