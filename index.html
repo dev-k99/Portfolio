@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kwanele Ntshangase — .NET Fullstack Developer</title>
+    <meta name="description" content="Kwanele Ntshangase — .NET Fullstack Developer building POPIA-compliant, Azure-deployed systems with ASP.NET Core 8, React, and Clean Architecture. Published GitHub Marketplace tool. 8+ live deployments." />
+    <meta name="theme-color" content="#0066ff" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dev-k99.github.io/Portfolio/" />
+    <meta property="og:title" content="Kwanele Ntshangase — .NET Fullstack Developer" />
+    <meta property="og:description" content="Published GitHub Marketplace tool. 8+ live deployed systems across ASP.NET Core 8, React, Azure, and LangGraph. SA regulatory domain expertise — POPIA, SAPS/ITAC." />
+    <meta property="og:image" content="https://dev-k99.github.io/Portfolio/images/portfolio/Head.jpg" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kwanele Ntshangase — .NET Fullstack Developer" />
+    <meta name="twitter:description" content="Published GitHub Marketplace tool. 8+ live deployed systems across ASP.NET Core 8, React, Azure, and LangGraph." />
+    <meta name="twitter:image" content="https://dev-k99.github.io/Portfolio/images/portfolio/Head.jpg" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,6 +40,14 @@
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#approach">Approach</a>
+            <a href="Resume/Kwanele Ntshangase_CV.pdf" class="nav-cv-btn" download>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download CV
+            </a>
             <a href="#contact" class="btn-primary">
               <svg
                 width="20"
@@ -92,9 +113,19 @@
               <span class="main-title">.NET Fullstack Developer</span>
             </h1>
             <p class="hero-subtitle">
-              Building production-deployed systems for real users — ASP.NET Core, React, Azure, and Clean Architecture.
+              Building POPIA-compliant, Azure-deployed systems with ASP.NET Core 8, React, and Clean Architecture — including a tool published on the GitHub Marketplace.
             </p>
-            <a href="#about" class="cta-button">Learn more about me</a>
+            <div class="hero-ctas">
+              <a href="#projects" class="cta-button">View My Work</a>
+              <a href="Resume/Kwanele Ntshangase_CV.pdf" class="cta-button cta-button--secondary" download>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download CV
+              </a>
+            </div>
           </div>
           <div class="hero-image">
             <div class="image-wrapper">
@@ -546,7 +577,7 @@
             </div>
             <h3 class="project-featured__title">ScrapFlow SA</h3>
             <p class="project-featured__description">
-              SAPS/ITAC-compliant scrap metal platform for South African scrapyards — 6-step digital ticket workflow, real-time SignalR inventory, 5-role RBAC with JWT, weighbridge integration via Web Serial API, offline-first PWA, and a webhook automation engine for Zapier/n8n. Deployed Vercel + Render with GitHub Actions CI/CD.
+              SAPS/ITAC-compliant scrap metal platform — 6-step digitised ticket workflow (vehicle arrival → weighing → grading → tare → payment → completion) eliminating paper-based processing. Real-time SignalR inventory across multi-site yards. 5-role RBAC with JWT. Webhook automation engine using HMAC-SHA256 signed payloads integrating with Zapier/n8n. Weighbridge via Web Serial API. Offline-first PWA. Deployed Vercel + Render with GitHub Actions CI/CD.
             </p>
             <div class="project-featured__tags">
               <span class="tag">React 18</span>
@@ -572,6 +603,7 @@
                 </svg>
                 GitHub
               </a>
+              <button class="btn-case-study" data-project="scrapflow">Case Study →</button>
             </div>
           </div>
         </div>
@@ -582,6 +614,43 @@
           <button class="filter-btn" data-filter="dotnet">.NET Full-Stack</button>
           <button class="filter-btn" data-filter="ai">AI &amp; ML</button>
           <button class="filter-btn" data-filter="frontend">Frontend</button>
+        </div>
+
+        <!-- PUBLISHED TOOL HIGHLIGHT -->
+        <div class="published-tool-banner">
+          <div class="published-tool-banner__image">
+            <img src="./images/portfolio/raptorai.png" alt="RaptorReview AI" loading="lazy" />
+          </div>
+          <div class="published-tool-banner__body">
+            <div class="published-tool-banner__meta">
+              <span class="badge-marketplace">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                Published on GitHub Marketplace
+              </span>
+            </div>
+            <h3 class="published-tool-banner__title">RaptorReview AI</h3>
+            <p class="published-tool-banner__desc">
+              A GitHub Action that automatically reviews every pull request using an LLM — posting line-specific security, performance, and readability comments directly in the PR interface. Built with Python, Groq, and tiktoken. No paid API key or hosted infrastructure required. Installable by any GitHub repository in one step.
+            </p>
+            <div class="published-tool-banner__tags">
+              <span class="tag">Python</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Groq</span>
+              <span class="tag">LLM</span>
+              <span class="tag">tiktoken</span>
+            </div>
+            <div class="published-tool-banner__cta">
+              <a href="https://github.com/marketplace/actions/raptorreview-ai" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                View on Marketplace
+              </a>
+              <a href="https://github.com/dev-k99/raptorreview-ai" class="btn-outline" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub
+              </a>
+              <button class="btn-case-study" data-project="raptorreview">Case Study →</button>
+            </div>
+          </div>
         </div>
 
         <!-- PROJECTS GRID -->
@@ -602,7 +671,8 @@
                 <span class="tag">Agile / Scrum</span>
               </div>
               <h3 class="pcard__title">WardCare+</h3>
-              <p class="pcard__desc">Azure-deployed hospital management MVC app with 7-role RBAC, POPIA audit logging, and automated CI/CD. Delivered Agile in a team of 4 with parallel subsystem development.</p>
+              <p class="pcard__desc">Azure-deployed hospital management MVC app with 7-role RBAC and policy-based authorization. Solely owned the cloud pipeline: Azure App Service, Azure SQL, GitHub Actions CI/CD with OIDC workload identity federation (zero stored credentials). POPIA audit trail via EF Core SaveChangesInterceptor — before/after JSON snapshots across 25+ entities with soft-delete on every table.</p>
+              <button class="btn-case-study" data-project="wardcare">Case Study →</button>
             </div>
             <div class="pcard__hover">
               <a href="https://wardcareplus.azurewebsites.net/" class="pcard__link pcard__link--live" target="_blank" rel="noopener noreferrer">
@@ -631,7 +701,8 @@
                 <span class="tag">Azure App Service</span>
               </div>
               <h3 class="pcard__title">Eskhawini LibraryOS</h3>
-              <p class="pcard__desc">Clean Architecture library platform with real-time SignalR notifications, JWT refresh rotation, QR code loans, and voice search. ASP.NET Core backend deployed on Azure App Service.</p>
+              <p class="pcard__desc">Clean Architecture REST API — 35+ endpoints across 7 controllers — with JWT refresh rotation, fixed-window rate limiting, and SignalR group-based notifications. Resolved a JWT refresh race condition using a subscriber queue pattern. Eliminated N+1 queries with eager-loaded GetAllAsync() + .Include(). PostgreSQL health check probes (/health/ready, /health/live) used as Azure liveness and readiness probes.</p>
+              <button class="btn-case-study" data-project="libraryos">Case Study →</button>
             </div>
             <div class="pcard__hover">
               <a href="https://eskhawini-library-system.vercel.app/" class="pcard__link pcard__link--live" target="_blank" rel="noopener noreferrer">
@@ -659,7 +730,8 @@
                 <span class="tag">TypeScript</span>
               </div>
               <h3 class="pcard__title">Fitness Tracker</h3>
-              <p class="pcard__desc">Full-stack fitness logging app with a C# REST API backend and React TypeScript frontend for tracking workouts and goals.</p>
+              <p class="pcard__desc">ASP.NET Core 8 REST API with Clean Architecture (Controllers → Services → Repositories), BCrypt password hashing (12 rounds), JWT auth, EF Core Code-First migrations, and Docker + Docker Compose. The architectural pattern here — service-repository separation, EF Core migrations, JWT — is the same foundation scaled up in LibraryOS and ScrapFlow.</p>
+              <button class="btn-case-study" data-project="fitness">Case Study →</button>
             </div>
             <div class="pcard__hover">
               <a href="https://github.com/dev-k99/Fitness-Tracker" class="pcard__link pcard__link--github" target="_blank" rel="noopener noreferrer">
@@ -687,7 +759,8 @@
                 <span class="tag">RAGAS</span>
               </div>
               <h3 class="pcard__title">DocLens</h3>
-              <p class="pcard__desc">Production-grade PDF RAG system with hybrid retrieval (BM25 + dense vectors), cross-encoder reranking, and RAGAS evaluation — 25–31% improvement over cosine similarity baseline across all four metrics.</p>
+              <p class="pcard__desc">PDF RAG system with hybrid BM25 + dense vector retrieval (BAAI/bge-large-en-v1.5, top-5 MTEB), Reciprocal Rank Fusion, and cross-encoder reranking. Validated on a 20-question RAGAS test set: Faithfulness +25%, Answer Relevancy +24%, Context Recall +29%, Context Precision +31% over cosine-similarity baseline.</p>
+              <button class="btn-case-study" data-project="doclens">Case Study →</button>
             </div>
             <div class="pcard__hover">
               <a href="https://dev-k99.github.io/RAG-Assistant/" class="pcard__link pcard__link--live" target="_blank" rel="noopener noreferrer">
@@ -719,7 +792,8 @@
                 <span class="tag">Tavily</span>
               </div>
               <h3 class="pcard__title">MemOS</h3>
-              <p class="pcard__desc">Agentic AI assistant with a custom LangGraph StateGraph, persistent PostgreSQL memory across sessions, ChromaDB RAG over uploaded documents, Tavily live web search, and full LangSmith observability — deployed at zero cost.</p>
+              <p class="pcard__desc">Agentic AI assistant with a custom LangGraph StateGraph — not create_react_agent — for direct control over tool binding. bind_tools(parallel_tool_calls=False) prevents the Groq/Llama failed_generation error in production. RAG injected as system message context for reliability. PostgreSQL cross-session memory, LangSmith observability. Deployed at $0/month.</p>
+              <button class="btn-case-study" data-project="memos">Case Study →</button>
             </div>
             <div class="pcard__hover">
               <a href="https://memos-v2-1.streamlit.app" class="pcard__link pcard__link--live" target="_blank" rel="noopener noreferrer">
@@ -749,7 +823,8 @@
                 <span class="tag">Docker</span>
               </div>
               <h3 class="pcard__title">PulseTrace</h3>
-              <p class="pcard__desc">Free AI agent monitoring & evaluation dashboard — OpenTelemetry-style waterfall traces, real-time latency/cost/pass-rate metrics, agent health grid, and structured log export. Zero API keys required, deployed on HuggingFace Spaces via Docker.</p>
+              <p class="pcard__desc">Free AI agent monitoring dashboard — OpenTelemetry-style waterfall traces, real-time latency/cost/pass-rate metrics, agent health grid, CSV/JSON log export. ZAR-denominated cost tracking. No API keys. SQLite auto-seeds on HuggingFace Spaces ephemeral storage. Docker-deployed on HuggingFace Spaces free tier.</p>
+              <button class="btn-case-study" data-project="pulsetrace">Case Study →</button>
             </div>
             <div class="pcard__hover">
               <a href="https://kwanele99-pulsetrace.hf.space" class="pcard__link pcard__link--live" target="_blank" rel="noopener noreferrer">
@@ -763,34 +838,6 @@
             </div>
           </article>
 
-          <!-- RaptorReview AI -->
-          <article class="pcard" data-category="ai">
-            <div class="pcard__image">
-              <img src="./images/portfolio/raptorai.png" alt="RaptorReview AI GitHub Action" loading="lazy" />
-              <span class="badge-live pcard__badge"><span class="badge-live__dot"></span>Live</span>
-            </div>
-            <div class="pcard__body">
-              <div class="pcard__tags">
-                <span class="tag">Python</span>
-                <span class="tag">GitHub Actions</span>
-                <span class="tag">Groq</span>
-                <span class="tag">LLM</span>
-                <span class="tag">tiktoken</span>
-              </div>
-              <h3 class="pcard__title">RaptorReview AI</h3>
-              <p class="pcard__desc">GitHub Action published on the Marketplace that reviews every PR using Groq's free-tier LLM — posts line-specific security, performance, and readability comments directly in the PR interface. No paid API or hosted infrastructure required.</p>
-            </div>
-            <div class="pcard__hover">
-              <a href="https://github.com/marketplace/actions/raptorreview-ai" class="pcard__link pcard__link--live" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                Marketplace
-              </a>
-              <a href="https://github.com/dev-k99/raptorreview-ai" class="pcard__link pcard__link--github" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                GitHub
-              </a>
-            </div>
-          </article>
 
           <!-- Phakathwayo JMS -->
           <article class="pcard" data-category="frontend">
@@ -806,7 +853,8 @@
                 <span class="tag">Tailwind CSS</span>
               </div>
               <h3 class="pcard__title">Phakathwayo JMS</h3>
-              <p class="pcard__desc">Freelance project for a local construction company — responsive, SEO-optimised business site with WhatsApp integration, deployed to Netlify.</p>
+              <p class="pcard__desc">Freelance project for a real Richards Bay construction company with 17 verified 5-star Google Reviews. WhatsApp Business integration with pre-populated message templates matched to the client's actual communication channel. SEO-optimised, responsive React/TypeScript/Tailwind site deployed to Netlify.</p>
+              <button class="btn-case-study" data-project="phakathwayo">Case Study →</button>
             </div>
             <div class="pcard__hover">
               <a href="https://phakathwayo-jms.netlify.app/" class="pcard__link pcard__link--live" target="_blank" rel="noopener noreferrer">
@@ -833,7 +881,8 @@
                 <span class="tag">LocalStorage</span>
               </div>
               <h3 class="pcard__title">Stories Feature Clone</h3>
-              <p class="pcard__desc">Instagram-style Stories — image uploads stored in localStorage that expire after 24 hours. Pixel-faithful UI clone.</p>
+              <p class="pcard__desc">Instagram Stories clone demonstrating browser storage patterns: localStorage with Base64 encoding via the FileReader API, time-based 24-hour expiry, and automatic cleanup on load. The localStorage vs IndexedDB trade-off explored here directly informed the offline-first IndexedDB strategy in ScrapFlow's PWA.</p>
+              <button class="btn-case-study" data-project="stories">Case Study →</button>
             </div>
             <div class="pcard__hover">
               <a href="https://instagram-story-feature-ochre.vercel.app/" class="pcard__link pcard__link--live" target="_blank" rel="noopener noreferrer">
@@ -863,7 +912,8 @@
                 <span class="tag">Vite</span>
               </div>
               <h3 class="pcard__title">Kova</h3>
-              <p class="pcard__desc">Production-grade e-commerce storefront with product catalog, cart, wishlist, Quick View, Paystack ZAR checkout, promo codes, and an admin dashboard — editorial Open Fashion aesthetic.</p>
+              <p class="pcard__desc">Production e-commerce storefront with Paystack ZAR checkout, cart, wishlist, promo codes, and admin dashboard. Zustand with persist middleware for cross-session state. TanStack Query v5 shared cache. URL-synced filters and accessibility-first: skip-to-main, ARIA labels, keyboard navigation, aria-live toast notifications.</p>
+              <button class="btn-case-study" data-project="kova">Case Study →</button>
             </div>
             <div class="pcard__hover">
               <a href="https://kova-alpha-puce.vercel.app/" class="pcard__link pcard__link--live" target="_blank" rel="noopener noreferrer">
@@ -901,7 +951,7 @@
             </div>
             <h3 class="feature-title">SA Regulatory Expertise</h3>
             <p class="feature-description">
-              Built POPIA-compliant audit trails and SAPS/ITAC-compliant ticketing systems — understanding legal constraints most junior devs ignore.
+              Built POPIA-compliant audit trails and SAPS/ITAC-compliant ticketing systems — understanding legal and regulatory constraints as architectural requirements.
             </p>
           </div>
 
@@ -925,7 +975,7 @@
             </div>
             <h3 class="feature-title">Clean Architecture</h3>
             <p class="feature-description">
-              Every production project follows separation of concerns across API / Core / Infrastructure layers — not tutorials, actual deployed systems.
+              Every production project follows separation of concerns across API / Core / Infrastructure layers, applied consistently across live deployed systems.
             </p>
           </div>
 
@@ -974,22 +1024,18 @@
             />
           </div>
           <div class="approach-text">
-            <h2 class="section-title">My Development Approach</h2>
+            <h2 class="section-title">How I Actually Work</h2>
             <p class="approach-intro">
-              I follow a structured approach to delivering high-quality
-              applications that cater to client needs. From gathering
-              requirements to product launch and ongoing maintenance, each step
-              is essential to project success.
+              Not a methodology. Four real things I've learned from shipping systems that have to stay up, stay compliant, and stay maintainable.
             </p>
 
             <div class="approach-steps">
               <div class="step">
                 <div class="step-number">1</div>
                 <div class="step-content">
-                  <h4 class="step-title">Requirements Gathering</h4>
+                  <h4 class="step-title">Compliance first, not last</h4>
                   <p class="step-description">
-                    Understanding the project needs and objectives to build a
-                    comprehensive roadmap.
+                    On WardCare+, POPIA wasn't a checkbox — it was an EF Core SaveChangesInterceptor capturing before/after JSON snapshots on every INSERT, UPDATE, and DELETE across 25+ entities, with soft-delete on every table. Designed into the architecture from day one, not bolted on.
                   </p>
                 </div>
               </div>
@@ -997,10 +1043,9 @@
               <div class="step">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                  <h4 class="step-title">Design and Development</h4>
+                  <h4 class="step-title">Real-time where it earns its keep</h4>
                   <p class="step-description">
-                    Creating design mockups and developing the application with
-                    modern technologies and best practices.
+                    SignalR on ScrapFlow means all connected yard operators see live stock changes the moment a ticket completes — no polling, no manual refresh. On LibraryOS, a background service probes active loans daily and pushes due-date alerts via WebSocket groups. I reach for real-time when the latency actually matters.
                   </p>
                 </div>
               </div>
@@ -1008,10 +1053,9 @@
               <div class="step">
                 <div class="step-number">3</div>
                 <div class="step-content">
-                  <h4 class="step-title">Testing and Optimization</h4>
+                  <h4 class="step-title">Debug root causes, not symptoms</h4>
                   <p class="step-description">
-                    Thoroughly testing for bugs, performance, and responsiveness
-                    across all devices.
+                    LibraryOS had a JWT refresh race condition: parallel Axios requests were each triggering a refresh, invalidating each other's tokens. I fixed it with a subscriber queue — the first request owns the refresh, all others queue and resolve against the same result. Retrying the symptom would have masked it indefinitely.
                   </p>
                 </div>
               </div>
@@ -1019,16 +1063,15 @@
               <div class="step">
                 <div class="step-number">4</div>
                 <div class="step-content">
-                  <h4 class="step-title">Launch and Maintenance</h4>
+                  <h4 class="step-title">Zero stored credentials in CI/CD</h4>
                   <p class="step-description">
-                    Deploying the application and providing ongoing support for
-                    updates and enhancements.
+                    WardCare+'s GitHub Actions pipeline uses OIDC workload identity federation to authenticate to Azure — no secrets stored in GitHub, no rotation risk. Every release is a single push to main. This is the kind of decision that looks like extra work upfront and saves the team from a credentials breach later.
                   </p>
                 </div>
               </div>
             </div>
 
-            <a href="#contact" class="cta-button">Schedule a consultation</a>
+            <a href="#contact" class="cta-button">Let's work together</a>
           </div>
         </div>
       </div>
@@ -1093,6 +1136,19 @@
             <p>Follow me on Twitter</p>
           </a>
 
+          <a href="Resume/Kwanele Ntshangase_CV.pdf" class="contact-card" download>
+            <div class="contact-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+              </svg>
+            </div>
+            <h3>Download CV</h3>
+            <p>One-page PDF resume</p>
+          </a>
+
           <a
             href="https://www.linkedin.com/in/kwanele-ntshangase-abab7037b/"
             class="contact-card"
@@ -1120,10 +1176,30 @@
     <footer class="footer">
       <div class="container">
         <p>
-          &copy; 2026 Kwanele | Full-Stack .NET Developer | Built with passion and code.
+          &copy; 2026 Kwanele Ntshangase &mdash; Published on GitHub Marketplace &middot; 8 live deployments &middot; <a href="mailto:kwanelerh069@gmail.com" style="color:inherit;text-decoration:underline;">kwanelerh069@gmail.com</a>
         </p>
       </div>
     </footer>
+
+    <!-- Case Study Modal -->
+    <div class="pmodal-overlay" id="pmodalOverlay" role="dialog" aria-modal="true" aria-labelledby="pmodalTitle">
+      <div class="pmodal">
+        <div class="pmodal__hero">
+          <img id="pmodalHeroImg" src="" alt="" />
+        </div>
+        <button class="pmodal__close" id="pmodalClose" aria-label="Close case study">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="pmodal__content">
+          <div class="pmodal__header">
+            <h2 class="pmodal__title" id="pmodalTitle"></h2>
+            <div class="pmodal__tags" id="pmodalTags"></div>
+            <div class="pmodal__links" id="pmodalLinks"></div>
+          </div>
+          <div id="pmodalSections"></div>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
