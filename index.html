@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kwanele Ntshangase — .NET Fullstack Developer</title>
-    <meta name="description" content="Kwanele Ntshangase — .NET Fullstack Developer building POPIA-compliant, Azure-deployed systems with ASP.NET Core 8, React, and Clean Architecture. Published GitHub Marketplace tool. 8+ live deployments." />
+    <meta name="description" content="Kwanele Ntshangase — .NET Fullstack Developer building POPIA-compliant, Azure-deployed systems with ASP.NET Core 8, React, and Clean Architecture. Published GitHub Marketplace tool. 9+ live deployments." />
     <meta name="theme-color" content="#0066ff" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dev-k99.github.io/Portfolio/" />
     <meta property="og:title" content="Kwanele Ntshangase — .NET Fullstack Developer" />
-    <meta property="og:description" content="Published GitHub Marketplace tool. 8+ live deployed systems across ASP.NET Core 8, React, Azure, and LangGraph. SA regulatory domain expertise — POPIA, SAPS/ITAC." />
+    <meta property="og:description" content="Published GitHub Marketplace tool. 9+ live deployed systems across ASP.NET Core 8, React, Azure, and LangGraph. SA regulatory domain expertise — POPIA, SAPS/ITAC." />
     <meta property="og:image" content="https://dev-k99.github.io/Portfolio/images/portfolio/Head.jpg" />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Kwanele Ntshangase — .NET Fullstack Developer" />
-    <meta name="twitter:description" content="Published GitHub Marketplace tool. 8+ live deployed systems across ASP.NET Core 8, React, Azure, and LangGraph." />
+    <meta name="twitter:description" content="Published GitHub Marketplace tool. 9+ live deployed systems across ASP.NET Core 8, React, Azure, and LangGraph." />
     <meta name="twitter:image" content="https://dev-k99.github.io/Portfolio/images/portfolio/Head.jpg" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -716,25 +716,31 @@
             </div>
           </article>
 
-          <!-- Fitness Tracker -->
+          <!-- SupportOS -->
           <article class="pcard" data-category="dotnet">
             <div class="pcard__image">
-              <img src="./images/portfolio/Fitness.png" alt="Fitness Tracker" loading="lazy" />
-              <span class="badge-github-only pcard__badge">GitHub Only</span>
+              <img src="./images/portfolio/supportOS.png" alt="SupportOS" loading="lazy" />
+              <span class="badge-live pcard__badge"><span class="badge-live__dot"></span>Live</span>
             </div>
             <div class="pcard__body">
               <div class="pcard__tags">
-                <span class="tag">C#</span>
-                <span class="tag">ASP.NET Core</span>
-                <span class="tag">React</span>
-                <span class="tag">TypeScript</span>
+                <span class="tag">ASP.NET Core 8</span>
+                <span class="tag">MediatR</span>
+                <span class="tag">CQRS</span>
+                <span class="tag">EF Core 8</span>
+                <span class="tag">Azure</span>
+                <span class="tag">xUnit</span>
               </div>
-              <h3 class="pcard__title">Fitness Tracker</h3>
-              <p class="pcard__desc">ASP.NET Core 8 REST API with Clean Architecture (Controllers → Services → Repositories), BCrypt password hashing (12 rounds), JWT auth, EF Core Code-First migrations, and Docker + Docker Compose. The architectural pattern here — service-repository separation, EF Core migrations, JWT — is the same foundation scaled up in LibraryOS and ScrapFlow.</p>
-              <button class="btn-case-study" data-project="fitness">Case Study →</button>
+              <h3 class="pcard__title">SupportOS</h3>
+              <p class="pcard__desc">Internal IT support ticket API demonstrating enterprise .NET patterns: MediatR 12 CQRS with typed pipeline (IdempotencyBehavior → LoggingBehavior → ValidationBehavior → PerformanceBehavior), Result&lt;T&gt; pattern, EF Core SaveChangesInterceptor audit trail, SLA tracking engine (Critical 2h / High 8h / Medium 24h / Low 48h), per-IP rate limiting, and JWT 3-role auth. Deployed to Azure App Service with GitHub Actions OIDC — zero stored credentials.</p>
+              <button class="btn-case-study" data-project="supportos">Case Study →</button>
             </div>
             <div class="pcard__hover">
-              <a href="https://github.com/dev-k99/Fitness-Tracker" class="pcard__link pcard__link--github" target="_blank" rel="noopener noreferrer">
+              <a href="https://supportos-api-bhb2cffee4cmg8f8.westeurope-01.azurewebsites.net/swagger/index.html" class="pcard__link pcard__link--live" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/dev-k99/SupportOS" class="pcard__link pcard__link--github" target="_blank" rel="noopener noreferrer">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 View Code
               </a>
@@ -1176,7 +1182,7 @@
     <footer class="footer">
       <div class="container">
         <p>
-          &copy; 2026 Kwanele Ntshangase &mdash; Published on GitHub Marketplace &middot; 8 live deployments &middot; <a href="mailto:kwanelerh069@gmail.com" style="color:inherit;text-decoration:underline;">kwanelerh069@gmail.com</a>
+          &copy; 2026 Kwanele Ntshangase &mdash; Published on GitHub Marketplace &middot; 9 live deployments &middot; <a href="mailto:kwanelerh069@gmail.com" style="color:inherit;text-decoration:underline;">kwanelerh069@gmail.com</a>
         </p>
       </div>
     </footer>

@@ -387,6 +387,21 @@ const projectData = {
     ]
   },
 
+  supportos: {
+    title: 'SupportOS',
+    image: './images/portfolio/supportOS.png',
+    live: 'https://supportos-api-bhb2cffee4cmg8f8.westeurope-01.azurewebsites.net/swagger/index.html',
+    github: 'https://github.com/dev-k99/SupportOS',
+    tags: ['ASP.NET Core 8', 'MediatR', 'CQRS', 'EF Core 8', 'Azure', 'xUnit', 'FluentValidation'],
+    sections: [
+      { label: 'The Problem', text: 'Clean Architecture gets a REST API to production — but controller → service → repository wiring creates two problems at scale: there is no single place to enforce cross-cutting concerns (logging, idempotency, performance monitoring) without touching every handler individually, and validation that throws exceptions makes every controller responsible for its own error formatting. MediatR and CQRS address both directly. I wanted a project where the pipeline was the architecture — not an afterthought added to a CRUD app.' },
+      { label: 'What I Built', text: 'An internal IT support ticket API with a 4-behavior MediatR pipeline: IdempotencyBehavior (IMemoryCache, X-Idempotency-Key, short-circuits on cache hit) → LoggingBehavior (request/response timing) → ValidationBehavior (FluentValidation returning field-keyed Result<T> failures, not exceptions) → PerformanceBehavior (warns when any handler exceeds 500ms). Result<T> pattern across all 8 commands and 4 queries — no try/catch in any endpoint. SLA tracking domain service with per-priority deadlines (Critical 2h / High 8h / Medium 24h / Low 48h). CanTransitionTo() state machine on the Ticket entity enforcing valid status transitions. EF Core SaveChangesInterceptor capturing before/after JSON audit snapshots on every write. Per-IP rate limiting. JWT 3-role auth. xUnit 2.6 + Moq 4.20 test suite covering handlers, behaviors, and SLA logic. Deployed to Azure App Service (F1) + Azure SQL Database via GitHub Actions OIDC — zero stored credentials.' },
+      { label: 'The Key Decision', text: 'MediatR pipeline behaviors as the single, ordered enforcement point for every cross-cutting concern. Instead of duplicating validation in every controller, adding logging to every service, or writing idempotency checks on each endpoint — the pipeline applies them once, in sequence, before any handler runs. The idempotency behavior is the clearest example: on a cache hit it returns the stored result immediately and the handler never executes. No handler needs to know idempotency exists. This is the architecture that makes enterprise .NET codebases maintainable at 50 engineers — not just functional for one.' },
+      { label: 'What It Taught Me', text: 'The Result<T> pattern changes how you think about errors at an architectural level. Once every operation returns Success or Failure instead of throwing, exception handling disappears from controllers entirely — a single ResultExtensions.ToHttpResult() maps every possible outcome to the correct HTTP status code in one place. ValidationBehavior returning a Dictionary<string, string[]> of field-keyed errors also showed me why RFC 7807 ValidationProblemDetails exists: frontend libraries like React Hook Form expect that exact shape, so getting it right in the API eliminates a whole category of client-side error parsing code.' },
+      { label: 'Real-World Impact', text: 'Every IT support team tracks three numbers: SLA breach rate, first response time, and average resolution time. The /metrics/dashboard endpoint surfaces all three — plus ticket counts by status, priority, and category, and a per-agent resolved vs assigned comparison for workload fairness. The audit interceptor means every status change, assignment, and comment is an immutable record — a compliance requirement in any environment where accountability matters. Live on Azure with Swagger UI at the public URL.' }
+    ]
+  },
+
   kova: {
     title: 'Kova',
     image: './images/portfolio/Kova.png',
