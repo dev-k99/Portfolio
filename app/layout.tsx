@@ -1,9 +1,11 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import { Footer } from '@/components/Footer';
+import { JsonLd } from '@/components/JsonLd';
 import { Nav } from '@/components/Nav';
 import { links, profile } from '@/content/profile';
 import { SITE_ORIGIN, SITE_URL, withBase } from '@/lib/paths';
+import { siteSchema } from '@/lib/schema';
 import './globals.css';
 
 const jetbrainsMono = JetBrains_Mono({
@@ -72,34 +74,15 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const personSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: profile.name,
-  url: SITE_URL,
-  jobTitle: profile.role,
-  description: profile.metaDescription,
-  email: `mailto:${links.email}`,
-  // City dropped along with the footer line; country stays because it is the one
-  // location signal worth keeping for search.
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'ZA',
-  },
-  sameAs: [links.github, links.linkedin, links.x],
-  knowsAbout: [
-    'ASP.NET Core',
-    'C#',
-    'Retrieval-Augmented Generation',
-    'LangGraph',
-    'Azure',
-    'Clean Architecture',
-  ],
+/** Paints mobile browser chrome to match the page instead of leaving it white. */
+export const viewport: Viewport = {
+  themeColor: '#000000',
+  colorScheme: 'dark',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${jetbrainsMono.variable} ${inter.variable}`}>
+    <html lang="en-ZA" className={`${jetbrainsMono.variable} ${inter.variable}`}>
       <body>
         <a
           href="#main"
@@ -112,11 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <Footer />
 
-        <script
-          type="application/ld+json"
-          // Static, author-controlled schema object — no user input reaches this.
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-        />
+        <JsonLd data={siteSchema} />
       </body>
     </html>
   );

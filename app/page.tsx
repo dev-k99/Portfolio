@@ -1,6 +1,7 @@
 import { CommandLink } from '@/components/CommandLink';
 import { CommentLabel } from '@/components/CommentLabel';
 import { FeaturedProject } from '@/components/FeaturedProject';
+import { JsonLd } from '@/components/JsonLd';
 import { ProjectCard } from '@/components/ProjectCard';
 import { ProjectIndex } from '@/components/ProjectIndex';
 import { Reveal } from '@/components/Reveal';
@@ -17,12 +18,15 @@ import { contactActions, contactChannels, profile } from '@/content/profile';
 import { projects } from '@/content/projects';
 import { skills } from '@/content/skills';
 import { toTerminalProject } from '@/lib/commands';
+import { profilePageSchema } from '@/lib/schema';
 
 const [featured, ...rest] = projects;
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={profilePageSchema} />
+
       {/* ---------------------------------------------------------------- Hero */}
       <section className="shell pb-16 pt-10 md:pb-24 md:pt-16">
         <Window title={profile.shell}>

@@ -3,11 +3,14 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { CommandLink } from '@/components/CommandLink';
 import { CommentLabel } from '@/components/CommentLabel';
+import { JsonLd } from '@/components/JsonLd';
 import { StatusBadge } from '@/components/StatusBadge';
 import { TechTag } from '@/components/TechTag';
 import { TerminalPrompt } from '@/components/TerminalPrompt';
+import { profile } from '@/content/profile';
 import { getProject, projects } from '@/content/projects';
-import { withBase } from '@/lib/paths';
+import { SITE_URL, withBase } from '@/lib/paths';
+import { projectSchema } from '@/lib/schema';
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -23,12 +26,34 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!project) return {};
 
+  const url = `${SITE_URL}/projects/${project.slug}/`;
+  const social = `${project.name} — ${project.tagline}`;
+  // A project's own screenshot makes a better card than the generic site one.
+  const image = withBase(project.image ?? '/opengraph-image.png');
+
   return {
     title: project.name,
     description: project.tagline,
+    // Must be set per route. Metadata is inherited from the root layout, so
+    // without this every case study would claim the homepage as its canonical
+    // URL and Google would drop all seven as duplicates.
+    alternates: { canonical: url },
+    // openGraph and twitter are replaced wholesale rather than deep-merged, so
+    // each has to repeat the fields it still needs (url, images, card type).
     openGraph: {
-      title: `${project.name} — ${project.tagline}`,
+      type: 'article',
+      url,
+      siteName: profile.name,
+      title: social,
       description: project.problem,
+      images: [{ url: image, alt: `${project.name} interface` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      creator: '@dev__k99',
+      title: social,
+      description: project.problem,
+      images: [image],
     },
   };
 }
@@ -45,6 +70,8 @@ export default async function ProjectPage({ params }: PageProps) {
 
   return (
     <article className="shell py-12 md:py-16">
+      <JsonLd data={projectSchema(project)} />
+
       <CommandLink href="/#projects">cd ../featured-projects</CommandLink>
 
       <header className="mt-10">
