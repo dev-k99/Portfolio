@@ -72,6 +72,11 @@ export const metadata: Metadata = {
     images: [ogImage],
   },
   robots: { index: true, follow: true },
+  // Google Search Console ownership proof. Public by design — it only asserts
+  // control of this site, it grants nothing on its own.
+  verification: {
+    google: 'twiCAdzCJI18zQfgZ2e2JHlVLGoK08vlSCHz5eIBiTk',
+  },
 };
 
 /** Paints mobile browser chrome to match the page instead of leaving it white. */
